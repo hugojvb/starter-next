@@ -1,23 +1,24 @@
 {
-  "name": "starter-next",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hugojvb/starter-next.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hugojvb/starter-next/issues"
-  },
-  "homepage": "https://github.com/hugojvb/starter-next#readme",
-  "devDependencies": {
-    "concurrently": "^6.3.0"
-  }
+	"name": "starter-next",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "concurrently \"cd backend && npm run develop  \" \"cd frontend && npm run dev\" ",
+		"install": "concurrently \"cd backend && npm install \" \"cd frontend && npm install\" "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hugojvb/starter-next.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hugojvb/starter-next/issues"
+	},
+	"homepage": "https://github.com/hugojvb/starter-next#readme",
+	"devDependencies": {
+		"concurrently": "^6.3.0"
+	}
 }
