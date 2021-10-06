@@ -1,8 +1,9 @@
 # Starter for Next
 
-### Features
+### Features:
 
 -   Typescript
+-   Strapi
 -   Material-ui
 -   Material-ui icons
 -   Emotion
@@ -11,3 +12,4 @@
 -   React query
 -   React hook form
 -   Axios
+-   Dayjs
