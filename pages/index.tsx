@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Typography } from "@mui/material";
+import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
 	return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<Navbar />
 			<Typography variant="h3" color="primary">
 				Ready to go!
 			</Typography>

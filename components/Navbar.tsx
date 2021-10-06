@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 const Navbar = () => {
 	return (
 		<div>
-			<AppBar position="fixed" color="primary">
+			<AppBar position="sticky" color="primary">
 				<Toolbar>
 					<Typography variant="h6">Navbar</Typography>
 				</Toolbar>
