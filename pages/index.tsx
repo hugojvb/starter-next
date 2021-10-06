@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "@material-ui/core";
+import { Typography } from "@mui/material";
 
 const Home: NextPage = () => {
 	return (
@@ -13,11 +13,9 @@ const Home: NextPage = () => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Button variant="contained" color="primary">
-				Button
-			</Button>
-
-			<h1>Ready to go!</h1>
+			<Typography variant="h3" color="primary">
+				Ready to go!
+			</Typography>
 		</div>
 	);
 };

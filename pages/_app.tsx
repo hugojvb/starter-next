@@ -1,26 +1,22 @@
 import React, { FC } from "react";
 import Head from "next/head";
-import { ThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider } from "@emotion/react";
 import theme from "../styles/theme";
+import createCache, { EmotionCache } from "@emotion/cache";
 
 export default function MyApp({
 	Component,
+	emotionCache = createCache({ key: "css" }),
 	pageProps,
 }: {
 	Component: FC<typeof pageProps>;
+	emotionCache: EmotionCache;
 	pageProps: Object;
 }) {
-	React.useEffect(() => {
-		// Remove the server-side injected CSS.
-		const jssStyles = document.querySelector("#jss-server-side");
-		if (jssStyles) {
-			jssStyles.parentElement?.removeChild(jssStyles);
-		}
-	}, []);
-
 	return (
-		<React.Fragment>
+		<CacheProvider value={emotionCache}>
 			<Head>
 				<title>My page</title>
 				<meta
@@ -33,6 +29,6 @@ export default function MyApp({
 				<CssBaseline />
 				<Component {...pageProps} />
 			</ThemeProvider>
-		</React.Fragment>
+		</CacheProvider>
 	);
 }
